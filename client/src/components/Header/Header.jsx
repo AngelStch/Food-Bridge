@@ -48,29 +48,40 @@ export default function Header() {
             <a className="navbar-brand">
               <img style={{ width: "170px" }} src="/logo.svg" alt="logo" />
             </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbars-rs-food"
+              aria-controls="navbars-rs-food"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
             {/* <ToastContainer/> */}
             <div className="collapse navbar-collapse" id="navbars-rs-food">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <Link to={Path.Home} className="nav-link">
-                  Начало
+                    Начало
                   </Link>
                 </li>
                 {isResturant && (
                   <>
                     <li className="nav-item">
                       <Link to={Path.Contact} className="nav-link">
-                      Контакт
+                        Контакт
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link to={Path.createOffers} className="nav-link">
-                      Създай оферта
+                        Създай оферта
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link to={Path.myOffers} className="nav-link">
-                      Мои оферти
+                        Мои оферти
                       </Link>
                     </li>
                   </>
@@ -84,17 +95,17 @@ export default function Header() {
                   <>
                     <li className="nav-item">
                       <Link to={Path.Contact} className="nav-link">
-                      Контакти
+                        Контакти
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link to={Path.Cart} className="nav-link">
-                      Моят количка
+                        Моят количка
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link to={Path.resturants} className="nav-link">
-                      Ресторанти
+                        Ресторанти
                       </Link>
                     </li>
                   </>
@@ -103,7 +114,7 @@ export default function Header() {
                 {isloggedIn ? (
                   <li onClick={() => logOut()} className="nav-item">
                     <Link to={"/"} className="nav-link">
-                    Изход
+                      Изход
                     </Link>
                   </li>
                 ) : (
@@ -118,10 +129,10 @@ export default function Header() {
                     </a>
                     <div className="dropdown-menu" aria-labelledby="dropdown-a">
                       <Link to={Path.RegisterFirm} className="dropdown-item">
-                      Ресторант
+                        Ресторант
                       </Link>
                       <Link to={Path.RegisterUser} className="dropdown-item">
-                      Потребител
+                        Потребител
                       </Link>
                     </div>
                   </li>

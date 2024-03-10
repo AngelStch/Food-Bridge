@@ -25,7 +25,7 @@ export default function Contact() {
             </div>
             <div className="row">
               <div className="col-lg-12">
-                <form id="contactForm">
+                <form className="contact-box-container" id="contactForm">
                   <div className="row">
                     <div className="col-md-12">
                       <div className="form-group">

@@ -50,7 +50,7 @@ export default function Resturants() {
                   style={{
                     marginTop: "20px",
                     padding: "8px",
-                    width: "330px",
+                    width: "250px",
                     marginRight: "8px",
                     borderRadius: "10px",
                     border: "1px solid #ccc",
@@ -96,7 +96,7 @@ export default function Resturants() {
                     <div className="gallery-single fix">
                       <img
                         src={resturant.restaurantImage}
-                        style={{ height: "230px", objectFit: "cover" }}
+                        style={{ height: "230px", objectFit: "cover", width: "100%" }}
                         className="img-fluid"
                         alt="Image"
                         onError={(e) =>

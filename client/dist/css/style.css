@@ -1468,3 +1468,13 @@ blockquote {
 .cursor:hover {
   cursor: pointer;
 }
+
+.contact-box-container {
+  width : 70%;
+  margin : auto
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+  .contact-box-container  {
+    width : 90%;  }
+}

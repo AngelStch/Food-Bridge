@@ -124,14 +124,14 @@ export default function index() {
                               <div className="card mb-3 shadow" key={item._id}>
                                 <div className="card-body">
                                   <div className="d-flex justify-content-between">
-                                    <div className="d-flex flex-row align-items-center">
+                                    <div style={{width: "50%"}} className="d-flex flex-column flex-sm-row align-items-sm-center">
                                       <div className="mr-3">
                                         <img
                                           src={item?.offerId?.offerImage}
                                           className="img-fluid rounded-3"
                                           alt="item"
                                           style={{
-                                            width: "65px",
+                                            width: "60px",
                                             height: "65px",
                                             objectFit: "cover",
                                           }}
@@ -141,48 +141,81 @@ export default function index() {
                                         <h5>{item?.offerId.mealName}</h5>
                                       </div>
                                     </div>
-                                    <div className="d-flex flex-row align-items-center">
+                                    <div style={{width: "50%"}} className="d-flex flex-row align-items-center justify-content-between ">
                                       <div
-                                        style={{
-                                          width: "50px",
-                                          height: "13px",
-                                        }}
+                                        // style={{
+                                        //   width: "50px",
+                                        //   height: "13px",
+                                        // }}
                                       >
                                         <h5 className="fw-normal mb-0">
                                           {item?.quantity}
                                         </h5>
                                       </div>
                                       <div
-                                        style={{
-                                          width: "80px",
-                                          height: "13px",
-                                        }}
+                                        // style={{
+                                        //   width: "80px",
+                                        //   height: "13px",
+                                        // }}
                                       >
                                         <h5 className="mb-0">
                                           {item?.offerId.price} лв.
                                         </h5>
                                       </div>
-                                      <div className="d-flex">
+                                      <div className="d-flex justify-between">
                                         <div
-                                          className="mr-1 cursor"
+                                          className="mr-2 cursor"
                                           onClick={() => handleRemove(item._id)}
-                                          style={{ color: "#cecece" }}
+                                          style={{ color: "#cecece"}}
                                         >
-                                          <i className="fa fa-minus fa-2x"></i>
+                                          <i style={{fontSize : "1.5em"}} className="fa fa-minus fa-"></i>
                                         </div>
                                         <div
                                           className="cursor"
                                           onClick={() => handleAdd(item)}
                                           style={{ color: "#cecece" }}
                                         >
-                                          <i className="fa fa-plus fa-2x"></i>
+                                          <i style={{fontSize : "1.5em"}} className="fa fa-plus fa-"></i>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
+                                  
                                 </div>
+                                
                               </div>
                             ))}
+                            {/* <div class="row mb-4 d-flex justify-content-between align-items-center">
+                    <div class="col-md-2 col-lg-2 col-xl-2">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
+                        class="img-fluid rounded-3" alt="Cotton T-shirt"/>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                      <h6 class="text-muted">Shirt</h6>
+                      <h6 class="text-black mb-0">Cotton T-shirt</h6>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                      <button class="btn btn-link px-2"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                        <i class="fas fa-minus"></i>
+                      </button>
+
+                      <input id="form1" min="0" name="quantity" value="1" type="number"
+                        class="form-control form-control-sm" />
+
+                      <button class="btn btn-link px-2"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                      <h6 class="mb-0">€ 44.00</h6>
+                    </div>
+                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                      <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                    </div>
+                  </div> */}
                         </div>
                       </div>
                       <div className="col-lg-5">
